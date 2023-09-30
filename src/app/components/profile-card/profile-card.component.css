@@ -13,6 +13,7 @@
   height: 450px;
   max-width: 600px;
   padding: 0px;
+  position: relative;
   display: flex;
   justify-content: center;
   align-self: flex-start; /* Centra l'immagine orizzontalmente */
@@ -66,9 +67,11 @@
 
 .card-testo{
   /* right: -100%; */
+  position: absolute;
+  bottom: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  position: absolute;
   background: #1f3d4738;
   backdrop-filter: blur(15px);
   border-radius: 15px;
@@ -95,7 +98,10 @@
   font-size: 23px;
   font-weight: 500;
   text-transform: uppercase;
-  margin: 10px;
+  /* margin: 10px; */
+  text-align: center; /* Centra orizzontalmente il testo */
+
+
 }
 
 .card-subtitle{
@@ -130,6 +136,9 @@
   width: 120px;
   margin: 10px;
   margin-left: 20px;
+  position: absolute;
+  left: 10%;
+  bottom: 10%;
 
 
 }
@@ -173,7 +182,7 @@
 .glass-card p{
   font-size: 14px;
   /* margin: 30px auto; */
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
   max-width: 330px;
 }
 .glass-btn{
@@ -203,8 +212,13 @@
 
 @media (max-width: 480px) {
   #card-image-profile{
-    width: 280px;
+    width: 260px;
     height: 350px;
 
+  }
+
+  .card-button{
+    left: 0;
+    bottom: 0;
   }
 }
