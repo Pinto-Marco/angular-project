@@ -1,0 +1,210 @@
+.body-card-profile {
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra gli elementi verticalmente */
+  justify-content: center; /* Centra gli elementi orizzontalmente */
+  background-color: #FCF7F8; /* Aggiunge un colore di sfondo per evidenziare il body */
+}
+
+#card-image-profile{
+  width: 330px;
+  height: 450px;
+  max-width: 600px;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  align-self: flex-start; /* Centra l'immagine orizzontalmente */
+  /* align-items: center; */
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: 0 1.5px 6px 0 rgba(0, 0, 0, 0.37);
+}
+
+#card-image-profilo:hover{
+  border-radius: 20px;
+  box-shadow: 0 3px 25px rgba(0, 0, 0, 0.3);
+}
+
+#card-image-profile img{
+  width: auto; /* Fai in modo che l'immagine riempia tutto il contenitore */
+  height: 450px;
+  margin: 0;
+  padding: 0px;
+  z-index: -2;
+  border-radius: 20px;
+}
+
+
+#card-nome-profile{
+  font-size: 20px;
+  font-weight: 500;
+  color: rgb(18, 2, 54);
+  width: fit-content;
+  height: 30px;
+  padding: 7px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center; /* Centra l'immagine orizzontalmente */
+  align-items: center;
+  margin: 0;
+  box-shadow: 0 0px 0.5px 0 rgba(0, 0, 0, 0.05);
+
+}
+
+#card-nome-profile:hover{
+  border-radius: 10px;
+  box-shadow: 0 0.1px 1px 0 rgba(0, 0, 0, 0.15);
+}
+
+.card-nome-profile h4{
+  font-family: 'Lato', sans-serif;
+  font-style: italic;
+  padding: 0px 12px;
+}
+
+.card-testo{
+  /* right: -100%; */
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: #1f3d4738;
+  backdrop-filter: blur(15px);
+  border-radius: 15px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+  /* visibility: hidden; */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+
+}
+
+#card-image-profile:hover .card-testo{
+  /* right: 0; */
+  opacity: 1; /* Rendilo visibile al passaggio del mouse */
+}
+#card-image-profile:hover .glass-card p{
+  margin: 0px;
+
+}
+
+.card-title{
+  font-size: 23px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin: 10px;
+}
+
+.card-subtitle{
+  font-size: 14px;
+  font-weight: 300;
+  margin: 10px 10px;
+  display: inline;
+  justify-content: center;
+  /* text-transform: capitalize; */
+}
+
+.card-info{
+  font-size: 16px;
+  font-weight: 400;
+  margin: 10px 10px;
+  padding: 0;
+  line-height: 25px;
+  justify-content: center;
+
+}
+
+.card-button{
+  color: #1f3d47;
+  background: #8fabba;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-transform: capitalize;
+  border: none;
+  outline: none;
+  font-weight: 500;
+  cursor: pointer;
+  width: 120px;
+  margin: 10px;
+  margin-left: 20px;
+
+
+}
+
+
+.glass-card{
+  width: 100%;
+  height: 100%;
+  max-width: 300px;
+  margin: 15px;
+  max-height: 600px;
+  color: #fff;
+  text-align: center;
+  padding: 70px 10px;
+  display: inline-block;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 0.5px 4px 0 rgba(0, 0, 0, 0.37);
+  border-radius: 20px;
+  transition: 1s;
+  transition-timing-function: ease;
+}
+.glass-card:hover{
+  /* border: 1px solid rgba(255, 255, 255, 0.3); */
+  background: rgba(240, 250, 250, 0.05);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+.glass-card h2{
+  font-size: 30px;
+  font-weight: 500;
+  margin: 20px 0;
+}
+
+.glass-card h1{
+  height: fit-content;
+}
+
+.glass-card p{
+  font-size: 14px;
+  /* margin: 30px auto; */
+  margin-bottom: 50px;
+  max-width: 330px;
+}
+.glass-btn{
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 500;
+  background-color: #fff;
+  color: #fff;
+  padding: 10px 30px;
+  border-radius: 30px;
+  margin: 10px 5px 10px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  transition: 1s;
+}
+.glass-btn:hover{
+  /* border: 1px solid rgba(255, 255, 255, 0.3); */
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+
+
+@media (max-width: 480px) {
+  #card-image-profile{
+    width: 280px;
+    height: 350px;
+
+  }
+}

@@ -1,2 +1,10 @@
-
-
+.body-chi-siamo{
+  margin-top: 90px;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  min-height: fit-content;
+}
