@@ -1,70 +1,97 @@
+<div class="header">
+  <a class="logo">Progetto</a>
+  <input class="menu-btn" type="menu-btn" id="menu-btn" type="checkbox">
+  <label for="menu-btn" class="menu-icon">
+    <span class="nav-icon"></span>
+  </label>
+  <ul class="menu" id="menu">
+    <li><a (click)="scrollToSection('#prova')">Il nostro team</a></li>
+    <li><a (click)="scrollToSection('#dove-trovarci')">Dove trovarci</a></li>
+    <li><a (click)="scrollToSection('#contattaci')">Contattaci</a></li>
+  </ul>
+</div>
 
-
-<app-toolbar class="toolbar"></app-toolbar>
-<!-- <div class="glass-card">
-  <h1><img style="background-color: white; border-radius: 50%;" src="https://img.icons8.com/ios-glyphs/30/null/user-male-circle.png"/></h1>
-  <h2>Marco</h2>
-  <h2>Pinto</h2>
-  <div class="div-glass-btn">
-    <a class="glass-btn">follow</a>
-    <a class="glass-btn">unfollow</a>
-  </div>
-</div> -->
-
-<!-- <div class="column left">
-  <h2 class="child">Studio avvocati seri</h2>
-  <p class="child">Questi siano noi! Lo studio più seri fra tutti gli studi seri di torino, affrontiamo solo casi difficili e seri e non ci fermiamo mai, neanche di fronte alle banalità</p>
-</div> -->
-<!-- <img class="child super-image" src="https://images.unsplash.com/photo-1593115057322-e94b77572f20?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2942&q=80"> -->
 <img class="super-image" src="https://images.unsplash.com/photo-1593115057322-e94b77572f20?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2942&q=80">
-<!-- <div class="background"></div> -->
 
 
-<div class="row" style="padding-bottom: 80px; min-height:110vh; ">
+<div id="first-row" class="row" style="padding-bottom: 0px; min-height:110vh; margin-bottom: 0px; ">
 
-  <!-- <div class="column full" style=" z-index: -1;">
-    <img class="child super-image" src="https://images.unsplash.com/photo-1593115057322-e94b77572f20?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2942&q=80">
-  </div> -->
   <div class="column full" id="prova" style="z-index: 5; background-color: #FCF7F8;">
 
     <div class="row">
-      <div class="column full">
+      <div class="column full" style="padding-top: 45px;">
         <h2 class="child title">Studio avvocati seri</h2>
       </div>
       <div class="column full">
-        <p class="child description">Questi siano noi! Lo studio più seri fra tutti gli studi seri di torino, affrontiamo solo casi difficili e seri e non ci fermiamo mai, neanche di fronte alle banalità</p>
+        <div class="container">
+          <p class="child description">Questi siano noi! Lo studio più seri fra tutti gli studi seri di torino, affrontiamo solo casi difficili e seri e non ci fermiamo mai, neanche di fronte alle banalità</p>
+        </div>
       </div>
     </div>
-    <div class="body-chi-siamo">
 
+    <div class="body-chi-siamo" id="chi-siamo">
       <app-profile-card></app-profile-card>
       <app-profile-card></app-profile-card>
       <app-profile-card></app-profile-card>
       <app-profile-card></app-profile-card>
-      <app-profile-card></app-profile-card>
+      <app-profile-card ></app-profile-card>
+      <div id="dove-trovarci"></div>
+    </div>
 
-
-      </div>
   </div>
-  <div class="column full" id="dove-trovarci" #chiSiamoAnchor style="background-color: #FCF7F8;">
+
+  <div class="column full" style="background-color: #FCF7F8;">
+
     <div class="row">
       <div class="column full">
         <h2 class="child title">Dove trovarci</h2>
       </div>
       <div class="column full">
-        <p class="child description">Questi siano noi! Lo studio più seri fra tutti gli studi seri di torino, affrontiamo solo casi difficili e seri e non ci fermiamo mai, neanche di fronte alle banalità</p>
-      </div>
-      <div class="column left-center">
-          <div class="image-description-container">
-            <img class="map-image" src="../assets/images/IMG_2121.jpg" alt="miniatura mappa">
+        <div class="container">
+            <p class="child description">Questi siano noi! Lo studio più seri fra tutti gli studi seri di torino, affrontiamo solo casi difficili e seri e non ci fermiamo mai, neanche di fronte alle banalità. Lo studio più seri fra tutti gli studi seri di torino, affrontiamo solo casi difficili e seri e non ci fermiamo mai, neanche di fronte alle banalità. Lo studio più seri fra tutti gli studi seri di torino, affrontiamo solo casi difficili e seri e non ci fermiamo mai, neanche di fronte alle banalità.</p>
           </div>
-       </div>
-      <div class="column center">
-          <p class="child description">In questa sezione, troverete una mappa dettagliata sulla nostra posizione.</p>
       </div>
+      <div class="column full">
+        <div class="container">
+          <div class="image-container">
+            <a href="https://www.google.com/maps/place/Porta+Nuova/@45.0624197,7.6637429,15z/data=!4m10!1m2!2m1!1sporta+nuova!3m6!1s0x47886d6a39773955:0x9f7d00303134c2a0!8m2!3d45.062419!4d7.6787001!15sCgtwb3J0YSBudW92YZIBD3RyYW5zaXRfc3RhdGlvbuABAA!16s%2Fm%2F05m_1y8?entry=ttu">
+            <img class="map-image" src="../assets/images/IMG_2121.jpg" alt="miniatura mappa">
+            </a>
+          </div>
+          <p class="child description item-p">In questa sezione, troverete una mappa dettagliata sulla nostra posizione. Lo studio più seri fra tutti gli studi seri di torino, affrontiamo solo casi difficili e seri e non ci fermiamo mai, neanche di fronte alle banalità. In questa sezione, troverete una mappa dettagliata sulla nostra posizione. Lo studio più seri fra tutti gli studi seri di torino, affrontiamo solo casi difficili e seri e non ci fermiamo mai, neanche di fronte alle banalità. </p>
+        </div>
+      </div>
+    </div>
 
+  </div>
+
+  <div class="column full" #chiSiamoAnchor style="background-color: #FCF7F8; margin-bottom: 0px;">
+
+    <div class="column full">
+
+      <h2 class="child title">Contattaci!</h2>
+    </div>
+    <div class="column full">
+      <div class="container">
+        <p class="child description item-ps">In questa sezione, troverete una mappa dettagliata sulla nostra posizione. Lo studio più seri fra tutti gli studi seri di torino, affrontiamo solo casi difficili e seri e non ci fermiamo mai, neanche di fronte alle banalità!</p>
+      </div>
+      <div class="container" id="contattaci">
+
+        <form action="mailto:tua@email.com" method="POST" enctype="text/plain">
+          <h2>Inviaci un'email</h2>
+          <div class="form-group">
+              <label for="email">Il tuo indirizzo email:</label>
+              <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+              <label for="message">Testo della email:</label>
+              <textarea id="message" name="message" rows="6" required></textarea>
+          </div>
+          <button type="submit">Invia</button>
+      </form>
+      </div>
     </div>
   </div>
+
+
 </div>
-
-

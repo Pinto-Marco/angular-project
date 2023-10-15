@@ -4,6 +4,176 @@
   left: 0;
   z-index: 9999;
 }
+html {
+  scroll-behavior: smooth;
+}
+
+/* inizio componente toolbar */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+a{
+  color: gray;
+}
+
+.header{
+  background-color: #212121;
+  box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, .1);
+  width: 100%;
+  z-index: 999;
+  position: fixed;
+  top: 0;
+}
+.header .logo{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  float: left;
+  font-size: 25px;
+  padding: 10px 20px;
+}
+.header ul a:hover{
+  background-color: #181818;
+}
+.header .menu{
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+.header .menu-icon{
+  padding: 28px 20px;
+  position: relative;
+  float: right;
+  cursor: pointer;
+}
+.header .menu-icon .nav-icon{
+  background: grey;
+  display: block;
+  height: 2px;
+  width: 18px;
+  position: relative;
+  transition: background-color .2s ease-out;
+}
+.header .menu-icon .nav-icon::before,
+.header .menu-icon .nav-icon::after{
+  background-color: grey;
+  content: '';
+  display: block;
+  height: 100%;
+  width: 100%;
+  transition: transform .2s ease-out;
+  position: absolute;
+}
+.header .menu-icon .nav-icon::after{
+  top: -5px;
+}
+.header .menu-icon .nav-icon::before{
+  top: 5px;
+}
+.header .menu-btn{
+  display: none;
+}
+.header .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+.menuCover{
+  max-height: 0;
+}
+.header .menu-btn:checked ~ .menu-icon .nav-icon {
+  background: transparent;
+}
+.header .menu-btn:checked ~ .menu-icon .nav-icon::before{
+  transform: rotate(-45deg);
+  top: 0;
+}
+.header .menu-btn:checked ~ .menu-icon .nav-icon::after {
+  transform: rotate(45deg);
+  top: 0;
+}
+.menu{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #212121;
+}
+.menu li{
+  background-color: #212121;
+  color: #fff;
+}
+.menu a{
+  display: block;
+  padding: 20px;
+  text-decoration: none;
+}
+
+
+
+
+
+/* Stili per schermi di larghezza maggiore di 768px */
+@media screen and (min-width: 769px) {
+  .header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .header .logo {
+    font-size: 25px;
+    padding: 10px 20px;
+    margin-right: auto; /* Mette il logo a sinistra */
+  }
+
+  .header ul {
+    display: flex;
+    list-style: none;
+  }
+
+  .header ul li {
+    background-color: #212121;
+    color: #fff;
+    margin-left: 10px;
+  }
+
+  .header ul li a {
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+  }
+
+  .header .menu-icon {
+    visibility: hidden; /* Nasconde il menu-icon */
+  }
+
+  .header .menu-btn {
+    visibility: hidden;/* Nasconde il menu-icon */
+  }
+
+  .header .menu-btn {
+    display: block; /* Mostra il menu-btn */
+  }
+
+  .header .menu {
+    max-height: 100%; /* Imposta la massima altezza per mostrare subito il menu */
+    transition: max-height .2s ease-out;
+  }
+}
+
+
+
+
+
+
+
+/* fine componente toolbar */
+
+
+.first-row{
+  height: 100%;
+}
 
 .super-image{
   width: 100%;
@@ -70,11 +240,15 @@
 }
 
 .container{
-  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  padding: 20px;
+}
+
+.riga{
+  display: block;
 }
 
 /* .row {
@@ -123,7 +297,7 @@
   font-weight: bold;
   text-transform: uppercase;
   font-family: 'Lato', sans-serif;
-  margin: 20px 40px; /* Aggiungi margine sopra e sotto al titolo */
+  margin: 20px 60px; /* Aggiungi margine sopra e sotto al titolo */
   padding: 0 10px; /* Aggiungi padding ai lati del titolo */
   text-align: left;
 }
@@ -131,8 +305,8 @@
 .description {
   font-size: 20px;
   line-height: 1.5;
-  margin: 10px 30px; /* Aggiungi margine sopra e sotto al paragrafo */
-  padding: 0 10px; /* Aggiungi padding ai lati del paragrafo */
+  margin: 10px 40px;
+  padding: 0 10px;
   text-align: left;
 }
 
@@ -154,16 +328,78 @@
   width: 350px;
   height: auto;
   display: flex;
+  margin: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-.image-description-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-   flex-direction: column;
-  text-align: center;
-  margin: 20px;
+.image-container {
+  margin-left: 20px;
 }
+
+.item-p{
+  margin-top: 20px;
+  flex-basis: 50%;
+  align-self: flex-start;
+}
+.item-ps{
+  display: block;
+
+}
+
+
+
+form {
+  width: 1000px;
+  margin: 0 10px;
+  margin-bottom: 40px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="email"],
+textarea {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  align-self: center;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+
+button {
+  color: #1f3d47;
+  background: #8fabba;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 800;
+}
+
+button:hover {
+  background-color: #8fabba;
+}
+
+
 
 
 
@@ -175,6 +411,12 @@
   #prova{
     margin-top: 550px;
   }
+  .container{
+    flex-wrap: wrap;
+  }
+  .item-p{
+    flex-basis: 90%;
+  }
 }
 @media (max-width: 640px) {
   #prova{
@@ -184,6 +426,11 @@
     margin: 10px 40px; /* Aggiungi margine sopra e sotto al titolo */
     padding: 0 10px; /* Aggiungi padding ai lati del titolo */
   }
+  .image-container {
+    margin-left: 0px;
+  }
+
+
 }
 @media (max-width: 480px) {
   .title{
@@ -192,6 +439,9 @@
   }
   .description{
     font-size: 15px;
+    margin: 10px 10px;
+    padding: 0 0;
+    flex-basis: 90%;
   }
   #prova{
     margin-top: 250px;
@@ -210,6 +460,28 @@
     float: none; /* Rimuove il float per i dispositivi mobili */
     width: 100%; /* Occupa l'intera larghezza */
     clear: both; /* Assicura che venga posizionato sotto il precedente */
+  }
+
+.container{
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+  }
+
+  .item-p{
+    flex-basis: 90%;
+  }
+  form {
+    max-width: 340px;
+    min-width: 320px;
+    width: 320px;
+
+  }
+  .container{
+    padding: 10px;
+  }
+  .image-container {
+    margin-left: 0px;
   }
 }
 
@@ -237,5 +509,14 @@
   height: 100%;
   background: linear-gradient(to bottom, transparent 50%, rgba(255, 255, 255, 0.7) 100%);
   transform: translateY(-50%);
+}
+
+.linea-divisoria {
+  width: 100%; /* Larghezza completa */
+  height: 2px; /* Altezza della linea */
+  background-color: #ccc; /* Colore della linea (puoi personalizzare) */
+  margin: 20px 50px;
+
+  z-index: 77;
 }
 
